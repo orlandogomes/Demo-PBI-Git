@@ -1,0 +1,43 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.1.0/schema.json",
+  "name": "d99181fcbabaab9067d7",
+  "position": {
+    "x": 107.32429099876695,
+    "y": 194.13070283600496,
+    "z": 1,
+    "height": 298.29839704069053,
+    "width": 298.29839704069053
+  },
+  "visual": {
+    "visualType": "card",
+    "autoSelectVisualType": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "FactSalesQuota"
+                        }
+                      },
+                      "Property": "SalesAmountQuota"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(FactSalesQuota.SalesAmountQuota)",
+              "nativeQueryRef": "Sum of SalesAmountQuota"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
